@@ -1,0 +1,23 @@
+name: Deploy theme
+
+on: [push]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Sync my theme
+        env:
+          source: './myrepo/mytheme/'
+          destination: 'bcivel@34.79.152.162:/var/www/html/wordpress/testben/'          
+        run: |
+          echo "${{secrets.DEPLOY_KEY}}" > deploy_key
+          chmod 600 ./deploy_key
+          sudo rsync -chav --delete \
+            -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
+            --exclude /sass \
+            ${{env.source}} ${{env.destination}}
