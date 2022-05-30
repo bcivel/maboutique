@@ -13,7 +13,7 @@ jobs:
       - name: Sync my theme
         env:
           source: './file/'
-          destination: 'bcivel@34.79.152.162:/var/www/html/wordpress/testben/'          
+          destination: 'bcivel@34.79.152.162:/var/www/testben/'          
         run: |
           echo "${{secrets.DEPLOY_KEY}}" > deploy_key
           chmod 600 ./deploy_key
