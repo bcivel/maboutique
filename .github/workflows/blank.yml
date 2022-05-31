@@ -12,7 +12,7 @@ jobs:
       run: echo Hello, world!
   deploy:
     needs: Build
-    name: Deploy
+    name: Deploy UAT
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +30,7 @@ jobs:
             --exclude /sass \
             ${{env.source}} ${{env.destination}}
   deployProd:
+    needs: Deploy UAT
     name: DeployProd
     runs-on: ubuntu-latest
     environment:
