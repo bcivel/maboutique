@@ -12,7 +12,7 @@ jobs:
 
       - name: Sync my theme
         env:
-          source: './file/'
+          source: './storefront/404.php'
           destination: 'bcivel@34.79.152.162:/var/www/testben/'          
         run: |
           echo "${{secrets.DEPLOY_KEY}}" > deploy_key
