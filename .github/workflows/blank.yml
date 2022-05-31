@@ -11,6 +11,7 @@ jobs:
     - name: Checkout source and build
       run: echo Hello, world!
   deploy:
+    needs: Build
     name: Deploy
     runs-on: ubuntu-latest
 
