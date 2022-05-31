@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Checkout source and build
       run: echo Hello, world!
-  deployUAT:
+  deploy_UAT:
     needs: build
     name: Deploy_UAT
     runs-on: ubuntu-latest
@@ -29,8 +29,21 @@ jobs:
             -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
             --exclude /sass \
             ${{env.source}} ${{env.destination}}
-  deployProd:
-    needs: deployUAT
+  run_Tests_UAT:
+    needs: deploy_UAT
+    name: runtest_UAT
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: cerberus-action
+      uses: cerberustesting/cerberus-github-action@v1
+      with:
+        host: https://jftl.cerberus-testing.com
+        campaign: SanityCheck
+        apikey: ${{ secrets.APIKEY }}
+        author: ${{ github.event.pusher.name }}
+  deploy_Prod:
+    needs: run_Tests_UAT
     name: DeployProd
     runs-on: ubuntu-latest
     environment:
