@@ -31,7 +31,7 @@ jobs:
             ${{env.source}} ${{env.destination}}
   run_Tests_UAT:
     needs: deploy_UAT
-    name: runtest_UAT
+    name: Run_Tests_UAT
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -44,7 +44,7 @@ jobs:
         author: ${{ github.event.pusher.name }}
   deploy_Prod:
     needs: run_Tests_UAT
-    name: DeployProd
+    name: Manual_Deploy_Prod
     runs-on: ubuntu-latest
     environment:
       name: triggerProdDeploy
