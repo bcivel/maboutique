@@ -12,8 +12,7 @@ jobs:
 
       - name: Sync my theme
         env:
-          source: './storefront/'
-          #destination: 'bcivel@34.79.152.162:/var/www/html/wp-content/themes/storefront/'     
+          source: './storefront/'  
           destination: 'bcivel@35.195.196.219:/var/www/html/wp-content/themes/storefront/' 
         run: |
           echo "${{secrets.DEPLOY_KEY_UAT}}" > deploy_key
