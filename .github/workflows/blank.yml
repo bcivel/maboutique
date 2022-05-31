@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Checkout source and build
       run: echo Hello, world!
-  deploy:
+  deployUAT:
     needs: Build
     name: Deploy_UAT
     runs-on: ubuntu-latest
