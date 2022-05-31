@@ -65,7 +65,7 @@ get_header(); ?>
 								'best_selling_products',
 								array(
 									'per_page' => 4,
-									'columns'  => 3,
+									'columns'  => 4,
 								)
 							);
 
