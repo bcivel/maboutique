@@ -122,6 +122,25 @@ Commit
 <img width="1050" alt="Capture d’écran 2022-06-12 à 11 40 48" src="https://user-images.githubusercontent.com/5376184/173227263-86ee8590-3503-4c9f-89c5-9880361cd532.png">
 
 
+### Générer un token sonarcloud
+Aller sur Account
+<img width="254" alt="Capture d’écran 2022-06-12 à 11 50 30" src="https://user-images.githubusercontent.com/5376184/173227573-f40b2de0-9c49-4730-ac19-8f6704f2eaf4.png">
+
+Aller sur Sécurité
+<img width="677" alt="Capture d’écran 2022-06-12 à 11 51 18" src="https://user-images.githubusercontent.com/5376184/173227612-4d2faaa9-7871-49b0-971f-f35ec8f3862a.png">
+
+Générer un token, et le copier
+
+Dans github, cliquer sur Settings
+<img width="837" alt="Capture d’écran 2022-06-12 à 11 53 06" src="https://user-images.githubusercontent.com/5376184/173227664-502ad354-378e-49d7-97a0-cd9f0b48385b.png">
+
+Dans le menu Secret / Actions
+<img width="1132" alt="Capture d’écran 2022-06-12 à 11 53 47" src="https://user-images.githubusercontent.com/5376184/173227702-df0c8cf5-ee78-472e-a321-6c9763239ca3.png">
+
+Ajouter un secret SONAR_TOKEN
+<img width="796" alt="Capture d’écran 2022-06-12 à 11 55 07" src="https://user-images.githubusercontent.com/5376184/173227763-bcb49e54-32ce-48b4-b84b-c3eb064dc6e2.png">
+
+
 
 ### Activer les Actions 
 1. Aller sur l'onglet Action
