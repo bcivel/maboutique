@@ -52,6 +52,48 @@
 \
 &nbsp;
 
+
+### Configurer 
+1. 
+<img width="420" alt="Capture d’écran 2022-06-12 à 20 33 53" src="https://user-images.githubusercontent.com/5376184/173249512-a13c54ec-588f-46a7-b948-0c1baa12da97.png">
+
+2. Désactiver le scan automatique
+<img width="1307" alt="Capture d’écran 2022-06-12 à 20 56 18" src="https://user-images.githubusercontent.com/5376184/173249539-3f3c5e5d-236e-4817-9d64-3c40b5c860e8.png">
+
+3. Cliquer sur la configuration via github actions
+<img width="1310" alt="Capture d’écran 2022-06-12 à 20 57 40" src="https://user-images.githubusercontent.com/5376184/173249555-f52d0501-2cb9-4a4d-8f79-e5500b9cddec.png">
+
+4. Copier le Token SONAR_TOKEN
+<img width="1066" alt="Capture d’écran 2022-06-12 à 20 58 26" src="https://user-images.githubusercontent.com/5376184/173249610-40b888cf-093d-440c-9e1c-f5612807d738.png">
+
+5. Choisir Other, et copier la configuration
+<img width="1032" alt="Capture d’écran 2022-06-12 à 21 02 13" src="https://user-images.githubusercontent.com/5376184/173249665-6bd5d406-ecaf-46f1-89c4-cbc91c3341dd.png">
+
+```
+sonarcloud:
+    needs: build
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+```
+
+6. Copier les propriétés 
+```
+sonar.projectKey
+sonar.organization
+```
+<img width="1036" alt="Capture d’écran 2022-06-12 à 21 19 45" src="https://user-images.githubusercontent.com/5376184/173249760-924a6856-3aa3-4567-81bf-d95765d23a24.png">
+
+
+
 Pour lancer une analyse, Faire un changement sur votre projet
 <img width="949" alt="Capture d’écran 2022-06-12 à 11 08 34" src="https://user-images.githubusercontent.com/5376184/173225998-9a0efd18-b745-473a-a282-c28e99fab76b.png">
 
