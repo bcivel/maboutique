@@ -71,6 +71,51 @@ Dans Sonar, vous arrivez sur cette page
 <img width="1070" alt="Capture d’écran 2022-06-12 à 11 05 22" src="https://user-images.githubusercontent.com/5376184/173225836-05ec0cb7-c13e-4695-91c7-a993960c2b8a.png">
 
 Pour lancer une analyse, Faire un changement sur votre projet
+<img width="949" alt="Capture d’écran 2022-06-12 à 11 08 34" src="https://user-images.githubusercontent.com/5376184/173225998-9a0efd18-b745-473a-a282-c28e99fab76b.png">
+
+<img width="578" alt="Capture d’écran 2022-06-12 à 11 09 20" src="https://user-images.githubusercontent.com/5376184/173226005-4d8d2f2a-8d43-464a-bb9e-e883cf55a433.png">
+
+<img width="1254" alt="Capture d’écran 2022-06-12 à 11 10 03" src="https://user-images.githubusercontent.com/5376184/173226016-4021ae43-dd92-44eb-b8d4-1cb31196ca5d.png">
+
+Cliquer sur Set New Code Definition
+<img width="1078" alt="Capture d’écran 2022-06-12 à 11 15 27" src="https://user-images.githubusercontent.com/5376184/173226264-f2f00e47-acef-40af-8c87-8f4623d6efda.png">
+
+Choisir previous version
+<img width="1340" alt="Capture d’écran 2022-06-12 à 11 15 57" src="https://user-images.githubusercontent.com/5376184/173226288-2c95b367-7df2-40ad-965b-0dc74eca2303.png">
+
+Lancer un changement
+
+Voir le resultat
+<img width="1049" alt="Capture d’écran 2022-06-12 à 11 17 34" src="https://user-images.githubusercontent.com/5376184/173226381-1dc7a317-62ab-41de-bcd7-bc04606307fe.png">
+
+
+Lancer un changement avec duplication de code
+
+```
+var names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+var uniqueNames = [];
+$.each(names, function(i, el){
+    if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+});
+
+var names2 = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+var uniqueNames2 = [];
+$.each(names2, function(i, el){
+    if($.inArray(el, uniqueNames2) === -1) uniqueNames2.push(el);
+});
+
+var names3 = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+var uniqueNames3 = [];
+$.each(names3, function(i, el){
+    if($.inArray(el, uniqueNames3) === -1) uniqueNames3.push(el);
+});
+```
+
+
+<img width="1066" alt="Capture d’écran 2022-06-12 à 11 23 12" src="https://user-images.githubusercontent.com/5376184/173226663-faa3345c-37ab-4ca2-8c91-d6ec1bd1a0ae.png">
+
+
+
 
 ### Activer les Actions 
 1. Aller sur l'onglet Action
