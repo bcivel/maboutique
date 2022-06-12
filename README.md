@@ -89,7 +89,7 @@ Voir le resultat
 <img width="1049" alt="Capture d’écran 2022-06-12 à 11 17 34" src="https://user-images.githubusercontent.com/5376184/173226381-1dc7a317-62ab-41de-bcd7-bc04606307fe.png">
 
 
-Lancer un changement avec duplication de code
+Lancer un changement
 
 ```
 var names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
@@ -97,23 +97,29 @@ var uniqueNames = [];
 $.each(names, function(i, el){
     if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
 });
-
-var names2 = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
-var uniqueNames2 = [];
-$.each(names2, function(i, el){
-    if($.inArray(el, uniqueNames2) === -1) uniqueNames2.push(el);
-});
-
-var names3 = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
-var uniqueNames3 = [];
-$.each(names3, function(i, el){
-    if($.inArray(el, uniqueNames3) === -1) uniqueNames3.push(el);
-});
 ```
 
 
 <img width="1066" alt="Capture d’écran 2022-06-12 à 11 23 12" src="https://user-images.githubusercontent.com/5376184/173226663-faa3345c-37ab-4ca2-8c91-d6ec1bd1a0ae.png">
 
+
+cliquer sur "See full Analysis"
+<img width="1060" alt="Capture d’écran 2022-06-12 à 11 36 28" src="https://user-images.githubusercontent.com/5376184/173227111-ab74afba-0bab-4ea9-ab60-b61436f7014d.png">
+Cliquer sur A rating required
+
+Analyser les changements à appliquer
+<img width="1002" alt="Capture d’écran 2022-06-12 à 11 37 14" src="https://user-images.githubusercontent.com/5376184/173227139-e1c22d3c-0217-4ffe-8394-4b389a7dddf6.png">
+
+Dans github, modifier le fichier 
+```
+let names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+let uniqueNames = [];
+$.each(names, function(_i, el){
+    if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+});
+```
+Commit
+<img width="1050" alt="Capture d’écran 2022-06-12 à 11 40 48" src="https://user-images.githubusercontent.com/5376184/173227263-86ee8590-3503-4c9f-89c5-9880361cd532.png">
 
 
 
