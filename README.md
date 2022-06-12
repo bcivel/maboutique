@@ -142,6 +142,8 @@ Ajouter un secret SONAR_TOKEN
 
 
 
+
+
 ### Activer les Actions 
 1. Aller sur l'onglet Action
 2. Cliquer sur Activer les workflows
