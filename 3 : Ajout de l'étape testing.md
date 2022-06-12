@@ -8,8 +8,35 @@
 \
 &nbsp;
 
-2. Cliquer sur Activer les workflows
-<img width="341" alt="Capture d’écran 2022-06-11 à 00 23 23" src="https://user-images.githubusercontent.com/5376184/173158211-2988a774-3f33-46c5-bb0c-7180c9cdb1c8.png">
+2. Cliquer sur Full_CI_to_complete.yml
+<img width="482" alt="Capture d’écran 2022-06-12 à 22 03 23" src="https://user-images.githubusercontent.com/5376184/173251289-bf5ebbcb-4eb7-46ce-99e2-3842cf5ebad1.png">
 
 \&nbsp;
+
+3. Cliquer sur edit
+4. Ajouter la configuration ci dessous
+```
+  run_Tests_UAT:
+    needs: sonarcloud
+    name: Run_Tests_UAT
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: cerberus-action
+      uses: cerberustesting/cerberus-github-action@v6
+      with:
+        host: https://jftl.cerberus-testing.fr
+        campaign: SanityCheck
+        apikey: ${{ secrets.APIKEY }}
+        author: ${{ github.event.pusher.name }}
+        environment: UAT
+        tag: ${TAG}
+```
+
+Vous obtenez ce resultat
+<img width="1237" alt="Capture d’écran 2022-06-12 à 22 11 05" src="https://user-images.githubusercontent.com/5376184/173251555-e01c730b-c1a4-4d9f-b36e-8a1fca9f5207.png">
+
+
+Commit ce changement. Et vérifier la bonne execution de la CI
+<img width="1403" alt="Capture d’écran 2022-06-12 à 22 16 12" src="https://user-images.githubusercontent.com/5376184/173251753-a3b29fcf-2edf-4ea6-82d8-c256ce9fb47b.png">
 
