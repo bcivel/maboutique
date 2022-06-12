@@ -11,6 +11,5 @@
 2. Cliquer sur Activer les workflows
 <img width="341" alt="Capture d’écran 2022-06-11 à 00 23 23" src="https://user-images.githubusercontent.com/5376184/173158211-2988a774-3f33-46c5-bb0c-7180c9cdb1c8.png">
 
-\
-&nbsp;
+\&nbsp;
 
