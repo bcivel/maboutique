@@ -419,7 +419,7 @@ $.each(names, function(_i, el){
 \
 &nbsp;
 
-Commit
+Commit et vérifier la correction des erreurs
 
 \
 &nbsp;
