@@ -92,6 +92,51 @@ sonar.organization
 ```
 <img width="1036" alt="Capture d’écran 2022-06-12 à 21 19 45" src="https://user-images.githubusercontent.com/5376184/173249760-924a6856-3aa3-4567-81bf-d95765d23a24.png">
 
+## Configurer votre projet Github
+
+1. Dand Github, aller dans Settings > Secrets > Actions
+
+2. Cliquer sur New repository secret
+<img width="789" alt="Capture d’écran 2022-06-12 à 21 32 35" src="https://user-images.githubusercontent.com/5376184/173250157-ce5b9e25-3cf9-4acb-85e6-a6641128c7e0.png">
+
+Name : SONAR_TOKEN
+Value : Le token sauvegardé
+
+3. Changer les propiétés du fichier de propriété sonar-project.properties par les propiétés récupérées dans Sonar
+<img width="1250" alt="Capture d’écran 2022-06-12 à 21 36 25" src="https://user-images.githubusercontent.com/5376184/173250293-33885f7f-83a8-4fbc-8bb5-3293e99294f7.png">
+
+
+4. Modifier le fichier /.github/workflows/full_CI_to_complete.yml
+<img width="1264" alt="Capture d’écran 2022-06-12 à 21 41 40" src="https://user-images.githubusercontent.com/5376184/173250448-b4b8028d-3292-476c-ad46-e4f4db247aad.png">
+
+Cliquer sur edit
+<img width="147" alt="Capture d’écran 2022-06-12 à 21 42 50" src="https://user-images.githubusercontent.com/5376184/173250466-0aada6d8-cdb8-4309-a488-76b5c1c9b22c.png">
+
+Coller la configuration ci dessous :
+```
+  sonarcloud:
+    needs: build
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+```
+
+Vous obtenez ce résultat
+<img width="1127" alt="Capture d’écran 2022-06-12 à 21 43 47" src="https://user-images.githubusercontent.com/5376184/173250504-31a29274-a4af-4982-b5b7-cc7c9ee37046.png">
+
+Cliquer sur Start Commit
+<img width="618" alt="Capture d’écran 2022-06-12 à 21 44 52" src="https://user-images.githubusercontent.com/5376184/173250546-9ee1a17f-a84d-4f8b-96da-d2cd6858e982.png">
+
+Depuis la page Actions, vérifier la bonne execution de la CI
+<img width="1264" alt="Capture d’écran 2022-06-12 à 21 41 40" src="https://user-images.githubusercontent.com/5376184/173250577-53441acb-eb4c-4023-aae5-b538181febb0.png">
 
 
 Pour lancer une analyse, Faire un changement sur votre projet
