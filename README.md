@@ -67,6 +67,10 @@ Choisir Free plan
 Selectionner et cliquer sur setup
 <img width="1097" alt="Capture d’écran 2022-06-12 à 09 44 34" src="https://user-images.githubusercontent.com/5376184/173222775-90676be0-a2d0-4186-94cb-8b8c42ad7761.png">
 
+Dans Sonar, vous arrivez sur cette page
+<img width="1070" alt="Capture d’écran 2022-06-12 à 11 05 22" src="https://user-images.githubusercontent.com/5376184/173225836-05ec0cb7-c13e-4695-91c7-a993960c2b8a.png">
+
+Pour lancer une analyse, Faire un changement sur votre projet
 
 ### Activer les Actions 
 1. Aller sur l'onglet Action
