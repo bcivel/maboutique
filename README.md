@@ -40,10 +40,35 @@ Vous devriez être redirigé sur votre fork (Cf. ci dessous)
 
 ## Ajout d'une Github Actions Qualité de code
 
+Aller sur la page https://sonarcloud.io/
 
+Choisir de parser un nouveau projet github
+<img width="520" alt="Capture d’écran 2022-06-12 à 09 37 10" src="https://user-images.githubusercontent.com/5376184/173222554-58f36ff0-bf29-41f5-a587-a0840aa8d3e0.png">
+
+Cliquer sur + / Ou ajouter un nouveau reposotory
+<img width="416" alt="Capture d’écran 2022-06-12 à 09 39 18" src="https://user-images.githubusercontent.com/5376184/173222632-4be3aa0d-e614-4c57-a107-fd997718d0f5.png">
+
+Choisir une organisation
+<img width="657" alt="Capture d’écran 2022-06-12 à 09 40 25" src="https://user-images.githubusercontent.com/5376184/173222660-48a0df75-8dbd-469f-a6f1-87550855550f.png">
+
+Choisir votre organisation perso
+<img width="608" alt="Capture d’écran 2022-06-12 à 09 40 57" src="https://user-images.githubusercontent.com/5376184/173222668-3e57b9eb-a8a0-4a40-b184-d9fcc6389011.png">
+
+Cliquer sur only select repository
+Choisir le projet ma boutique
+<img width="564" alt="Capture d’écran 2022-06-12 à 09 42 08" src="https://user-images.githubusercontent.com/5376184/173222704-d30d3892-ef93-486e-a516-9160415cbb8a.png">
+
+Create an organisation
+<img width="1098" alt="Capture d’écran 2022-06-12 à 09 43 25" src="https://user-images.githubusercontent.com/5376184/173222744-d36a1eeb-1b0d-4bc1-9098-90d07b8dd793.png">
+
+Choisir Free plan
+<img width="1076" alt="Capture d’écran 2022-06-12 à 09 43 53" src="https://user-images.githubusercontent.com/5376184/173222761-7b8175b2-5f37-477b-9b34-dd1e992356ce.png">
+
+Selectionner et cliquer sur setup
+<img width="1097" alt="Capture d’écran 2022-06-12 à 09 44 34" src="https://user-images.githubusercontent.com/5376184/173222775-90676be0-a2d0-4186-94cb-8b8c42ad7761.png">
 
 
 ### Activer les Actions 
 1. Aller sur l'onglet Action
 2. Cliquer sur Activer les workflows
-<img width="841" alt="Capture d’écran 2022-06-11 à 00 23 23" src="https://user-images.githubusercontent.com/5376184/173158211-2988a774-3f33-46c5-bb0c-7180c9cdb1c8.png">
+<img width="341" alt="Capture d’écran 2022-06-11 à 00 23 23" src="https://user-images.githubusercontent.com/5376184/173158211-2988a774-3f33-46c5-bb0c-7180c9cdb1c8.png">
